@@ -63,9 +63,10 @@ h1 {
 .h2 {
     position: relative;
     top: 50px;
-    left: cve;
+    left: -51px;
     font-size: 5rem;
-    
+    background-color: yellow;
+    z-index: 8;
 }
 
 .bio {
@@ -93,6 +94,7 @@ p {
 
 a {
     color: #ffffff;
+    text-decoration: none;
 }
 
 a:hover,
@@ -101,7 +103,12 @@ a:active,
 a.active {
     color: yellow;
 }
-
+a.btn:hover,
+a.btn:focus,
+a.btn:active,
+a.btn.active {
+    color: rgb(138, 138, 138);
+}
 
 
 .logo {
@@ -198,21 +205,177 @@ a.active {
 .imgRedonda {
     display: flex;
     justify-content: flex-start;
-    position:inherit;
+    position:relative;
     width: 300px;
     height: 300px;
     border-radius: 150px;
     margin-top: 100px;
     margin-left: 550px;
 }
+@media (max-width: 75em) {
+    .imgRedonda {
+        margin-top: 100px;
+        margin-left: 200px;
+}
+    
+}
+
+@media (max-width: 61.25em) {
+    .imgRedonda {
+        margin-top: 100px;
+        margin-left: 100px;
+}
+}
+
 
 .niño {
-    position: relative;
-    top: 300px;
-    /* margin-top: 400px;
-    margin-right: 50px; */
+    display: flex;
+    margin-top: 300px;
+    float: left;
+    /* position: relative; */
+   
     border-radius: 150px;
     max-width: 30%;
     max-height: 100%;
-    float: right;
+    padding: 32px;
+    z-index: 15;
 }
+
+.portfolio {
+    font-size: 4rem;
+    font-family: 'Staatliches', italic;
+    margin-top: 50px;
+    color: gray;
+    background-color: yellow;
+    padding: 10px;
+}
+
+.projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background-color: rgb(255, 255, 255);
+    
+  }
+  
+  .projects-section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    background-color: white;
+    padding: 74px 36px 86px 27px;
+    /* border-radius: 5%; */
+    margin-top: -34px;
+    background-image: url(https://pictures.ssg-service.com/MTB/MTB_ENDURO_PLP_BANNER_DESKTOP_1872408_jpg_original_1.jpg);
+    background-attachment: scroll;
+    
+  }
+  
+  @media (max-width: 28.75em) {
+    .projects-section-header {
+      font-size: 4rem;
+    }
+  }
+
+  
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+        grid-gap: -1rem;
+        width: 100%;
+        max-width: 1453px;
+        margin: 0 auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 29rem;
+        margin-left: auto;
+        margin-top: 167px;
+        margin-right: auto;
+        margin-bottom: -26rem;
+        margin-left: auto;
+        margin-bottom: 12rem;
+        align-content: stretch;
+        justify-content: space-evenly;
+        align-items: stretch;
+        justify-items: stretch;
+    }
+  
+  
+  @media (max-width: 30.625em) {
+    .projects-section{
+      padding: 6rem 1rem;
+    }
+    
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .project {
+    
+    box-shadow: 1px 1px 2px regba(0, 0, 0, 0.5);
+    border-radius: 50px;
+  }
+
+  /*.project-title {
+  margin-top: 30px;
+}*/
+
+.code {
+    color: yellow;
+    transition: color 0.3s ease-out;
+  }
+  
+  .project:hover .code {
+    color: #c9c5c3;
+  }
+  .project-image {
+    height: calc(200% - 6.8rem);
+    width: 258px;
+    background-color: gray;
+    object-fit: cover;
+  }
+  
+  #videArt {
+    padding: 12px 30px 30px 20px;
+  }
+
+  .project-title {
+      color: gray;
+    font-size: 3rem;
+    padding: 2rem, 0.5rem;
+    text-decoration: none;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+  }
+  
+  
+  .btn-show-all {
+    margin-top:  277px;
+    font-size: 3rem;
+    color: gray;
+    transition: background 0.3s ease-out;
+    
+  }
+  
+ 
+  
+  .btn-show-all:hover > i {
+    
+    transform: translateX(2px);
+  }
+  
+  .btn-show-all > i {
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+    
+  }
+
+  #rrss{
+      margin-left: 100px;
+  }
